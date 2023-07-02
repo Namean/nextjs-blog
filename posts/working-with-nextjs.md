@@ -1,6 +1,6 @@
 ---
 title: 'Working with Next.js'
-date: '2020-01-02'
+date: '2023-07-01'
 ---
 
 
