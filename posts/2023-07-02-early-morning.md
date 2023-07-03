@@ -51,4 +51,11 @@ I remember reading somewhere a comment by Linus Torvalds, bad programmers worry 
 Cacheing a build is also a thing, in Gradle, and Docker. But Prime mentions that this is something that is used in Netflix's build, and that it fully builds
 
 
-[Advent of Code](https://adventofcode.com/2022/day/25)
+[Advent of Code](https://adventofcode.com/)
+
+
+I keep hearing about Rust, people LOVE this language, saying it makes you feel like a genius. Which is cool and all but I'm still trying to learning programming in general.
+But what I've read from this book [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html) in 4.1 on ownership it covers the stack and heap. Its written in a coherent manner. 
+
+I want to learn Rust, but I'm still trying to cram the rest of JavaScript in my head and then TypeScript and React, just not at once.
+
