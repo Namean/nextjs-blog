@@ -23,4 +23,4 @@ const desmond = new Person('Desmond', job);
 
 
 console.log(job.calculatePayPerWeek())
-
+console.log()
