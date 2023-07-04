@@ -1,0 +1,12 @@
+.rental {
+    border: solid 1px #555;
+    border-radius: 8px;
+    padding: 20px;
+    filter: drop-shadow(40px 47px 69px rgba(0, 0, 0, 0.76));
+}
+
+.description {
+    font-size: 80%;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
