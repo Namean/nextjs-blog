@@ -2,68 +2,9 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Script from 'next/script';
 // import Layout from '../../components/layout';
+import Job from '../../components/Job.component';
 
 
-const schedule = [
-    {
-        day: 'sunday',
-        onDuty: false
-    },
-    {
-        day: 'monday',
-        onDuty: true,
-        shiftHours: 12
-    },
-    {
-        day: 'tuesday',
-        onDuty: true,
-        shiftHours: 8
-    },
-    {
-        day: 'wednesday',
-        onDuty: 'true',
-        shiftHours: 8
-    },
-    {
-        day: 'thursday',
-        onDuty: false,
-        shiftHours: 0
-    },
-    {
-        day: 'friday',
-        onDuty: true,
-        shiftHours: 12
-    },
-    {
-        day: 'saturday',
-        onDuty: true,
-        shiftHours: 4
-    }
-];
-
-function ShoppingList() {
-    const listItems = schedule.map(data =>
-        <div style={{
-            border: 'solid 1px black',
-            listStyle: 'none',
-            display: 'inline-block',
-            padding: '10px'
-        }}>
-        <li
-            key={1}
-            style={{
-                color: data.onDuty ? 'darkgreen' : 'red'
-            }}
-        >
-            {data.day}
-        </li>
-        </div>
-    );
-
-    return (
-        <ul>{listItems}</ul>
-    );
-}
 
 export default function Post() {
     return (
@@ -71,12 +12,12 @@ export default function Post() {
             <Head>
                 <title>Job</title>
             </Head>
-            <h1>Job</h1>
-            <div>
+            <h1 className='job-heading'>work schedule</h1>
+            <div className='job-container'>
                 <section>
-                    <h3>Calendar</h3>
+                    <h3>July 2nd - 8th</h3>
                 
-                    <ShoppingList />
+                    <Job />
                 </section>
             </div>
             <h2>

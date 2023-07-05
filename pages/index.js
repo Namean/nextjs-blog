@@ -2,18 +2,19 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 
-import Navigation from '../view/Navigation.component';
+
 
 
 import Link from 'next/link';
 import Date from '../components/date';
 
-
-
-import { getSortedPostsData } from '../lib/posts';
-
+const postsDirectory = path.join(process.cwd(), 'posts')
+const coursesDirectory = path.join(process.cwd(), 'courses')
+//import { getSortedPostsData } from '../lib/posts';
+import path from 'path';
+import { getSortedData } from '../lib/posts';
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = { posts: getSortedData(postsDirectory), courses: getSortedData(coursesDirectory)};
   return {
     props: {
       allPostsData,
@@ -28,9 +29,6 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        <header>
-          <Navigation />
-        </header>
       </Head>
       <section className={utilStyles.headingMd}>
         {/* <p>
@@ -41,9 +39,24 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.posts.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
             <Link href={`/posts/${id}`}>{title}</Link>
+            <br />
+            <small className={utilStyles.lightText}>
+              <Date dateString={date} />
+            </small>
+          </li> 
+          ))}
+        </ul>
+      </section>
+
+       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Courses</h2>
+        <ul className={utilStyles.list}>
+          {allPostsData.courses.map(({ id, date, title }) => (
+            <li className={utilStyles.listItem} key={id}>
+            <Link href={`/courses/${id}`}>{title}</Link>
             <br />
             <small className={utilStyles.lightText}>
               <Date dateString={date} />

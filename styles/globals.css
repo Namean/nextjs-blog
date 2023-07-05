@@ -25,3 +25,16 @@ img {
   max-width: 100%;
   display: block;
 }
+
+
+.job-heading {
+  color: red;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
+.job-container {
+  margin: 20px;
+}
+

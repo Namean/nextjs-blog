@@ -19,11 +19,12 @@ export default function Post() {
                     <h3><Link href="https://www.zumper.com/rooms-for-rent/indianapolis-in">Zumper - Rooms for Rent</Link></h3>
                     <br />
                     <h5>SouthPort</h5>
+                   
                     <div className={rentStyle.rental}>
                         <p className='price'>$349 <small> / month</small></p>
                         <Link href="https://www.zumper.com/apartments-for-rent/18961405p/room-for-rent-rumford-eastway-manor-indianapolis-in?gallery">
                             Cecil Ave & Rumford Rd
-                            </Link>
+                        </Link>
                         <p className={rentStyle.description}>This place looks more my speed, a bit nicer than what I'm used to though.
                             They have a leasing office 844-326-7293 ext. 3972
                         </p>
@@ -43,7 +44,7 @@ export default function Post() {
                     </div>
 
 
-                    
+
                 </section>
             </div>
         </Layout>

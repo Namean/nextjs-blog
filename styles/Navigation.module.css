@@ -1,20 +1,34 @@
 .mainNav {
-    
+  
+   
+}
+
+.mainNav > ul {
+    background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  
 }
 
 .navList {
     font-size: 120%;
     font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
 .navList li {
-    display: inline-block;
+    /* display: inline-block;
     list-style: none;
-    margin: 10px;
+    margin: 10px; */
+    list-style: none;
     
 }
 
 .navItem {
     color: red;
+    
 }
